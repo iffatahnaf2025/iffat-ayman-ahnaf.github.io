@@ -16,17 +16,3 @@ Personal portfolio website built with pure HTML, CSS & JavaScript — no framewo
 - **Active section tracking** — top nav and bottom nav highlight as you scroll
 
 ---
-
-## 🔗 Links
-
-| Platform | URL |
-|---|---|
-| LinkedIn | [linkedin.com/in/iffatahnaf](https://www.linkedin.com/in/iffatahnaf/) |
-| GitHub | [github.com/iffatahnaf2025](https://github.com/iffatahnaf2025) |
-| CV | [Google Drive](https://drive.google.com/file/d/1WQVZ-GItLPZCTefhvBUAKhhzJvhFPVZN/view?usp=drive_link) |
-
----
-
-<p align="center">
-  <sub>© 2025 Iffat Ayman Ahnaf · Built with curiosity & caffeine ☕</sub>
-</p>
