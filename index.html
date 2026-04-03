@@ -229,6 +229,19 @@ footer small{font-size:.68rem;color:var(--text3)}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
 .reveal.in{opacity:1;transform:translateY(0)}
+
+/* DS CARD ACCENT — top highlight border */
+.card-ds-featured {
+  position: relative;
+}
+.card-ds-featured::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), #f59e0b);
+  z-index: 2;
+}
 </style>
 </head>
 <body>
@@ -358,13 +371,62 @@ footer small{font-size:.68rem;color:var(--text3)}
     </div>
 
     <div class="panel on" id="panel-data">
-      <div class="card reveal">
+
+      <!-- ══════════════════════════════════════════════════════════════
+           CARD 1 — DS FINAL PROJECT (Diabetes Readmission)  ← NEW
+           ══════════════════════════════════════════════════════════════ -->
+      <div class="card card-ds-featured reveal">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=700&q=80&auto=format&fit=crop" alt="Diabetes Readmission Prediction" loading="lazy"/>
+        </div>
+        <div class="card-body">
+          <div style="display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin-bottom:.7rem">
+            <span class="card-tag" style="margin-bottom:0">Python · LightGBM · SHAP · Scikit-learn</span>
+            <span class="score-badge" style="margin-bottom:0"><i class="fas fa-circle-check"></i> Data Science Portfolio</span>
+          </div>
+          <h3 data-en="Predicting Diabetes Readmission: ML Approach to Smarter Hospital Care"
+              data-id="Prediksi Readmisi Diabetes: Pendekatan ML untuk Perawatan RS yang Lebih Cerdas">
+            Predicting Diabetes Readmission: ML Approach to Smarter Hospital Care
+          </h3>
+          <ul class="card-highlights">
+            <li data-en="Processed 101,766 patient records from 130 US hospitals through a 5-step preprocessing pipeline — filtering, missing value handling, feature engineering — down to 31 final features"
+                data-id="Memproses 101.766 catatan pasien dari 130 RS AS melalui pipeline preprocessing 5 langkah — hingga 31 fitur final">
+              Processed 101,766 patient records from 130 US hospitals through a 5-step preprocessing pipeline — down to 31 engineered features
+            </li>
+            <li data-en="Trained and compared 4 ML algorithms (LightGBM, XGBoost, Random Forest, Balanced RF) with SMOTE for class imbalance — LightGBM achieved best ROC-AUC 0.659 and 88.6% accuracy"
+                data-id="Melatih dan membandingkan 4 algoritma ML dengan SMOTE — LightGBM meraih ROC-AUC terbaik 0.659 dan akurasi 88.6%">
+              Compared 4 ML models with SMOTE for class imbalance — LightGBM achieved best ROC-AUC 0.659 and 88.6% accuracy
+            </li>
+            <li data-en="Applied SHAP explainability — top drivers (lab procedures, medications, discharge disposition) translated into 3 concrete hospital business recommendations"
+                data-id="Menerapkan SHAP explainability — prediktor utama diterjemahkan menjadi 3 rekomendasi bisnis konkret untuk rumah sakit">
+              Applied SHAP explainability — top risk drivers translated into 3 concrete hospital action plans
+            </li>
+          </ul>
+          <div style="margin-top:auto">
+            <div class="card-links">
+              <a href="https://github.com/iffatahnaf2025" class="card-link" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://drive.google.com/file/d/1tD7L_T7xQ368YYjP0DZBJqBDq7BEhXE5/view?usp=sharing" class="btn-accent" target="_blank" style="font-size:.7rem;padding:.38rem .9rem;min-height:34px;border-radius:var(--r-sm)">
+                <i class="fas fa-file-pdf"></i>
+                <span data-en="View Portfolio PDF" data-id="View Portfolio PDF">View Portfolio PDF</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════════
+           CARD 2 — Banking / RFM (was card 1)
+           ══════════════════════════════════════════════════════════════ -->
+      <div class="card reveal" style="transition-delay:.07s">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=700&q=80&auto=format&fit=crop" alt="Banking" loading="lazy"/>
         </div>
         <div class="card-body">
           <div style="display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin-bottom:.7rem">
             <span class="card-tag" style="margin-bottom:0">Python · SQL · Power BI · RFM</span>
+            <span class="score-badge" style="margin-bottom:0"><i class="fas fa-circle-check"></i> Data Analysis Portfolio</span>
           </div>
           <h3 data-en="Customer Segmentation & Churn Prevention: RFM Analysis on 1M+ Bank Transactions"
               data-id="Customer Segmentation & Churn Prevention: RFM Analysis on 1M+ Bank Transactions">
@@ -376,14 +438,22 @@ footer small{font-size:.68rem;color:var(--text3)}
             <li data-en="Surfaced ₹22B in assets held by 181K High Risk customers and identified 66K Loyalty Candidates ready for tier-upgrade" data-id="Menemukan ₹22 Miliar aset pada 181 ribu nasabah High Risk dan mengidentifikasi 66 ribu Loyalty Candidate yang siap naik tier">Surfaced ₹22B in assets held by 181K High Risk customers and identified 66K Loyalty Candidates ready for tier-upgrade</li>
             <li data-en="Delivered 5 strategic recommendations supported by a 3-page interactive Power BI dashboard" data-id="Menghasilkan 5 rekomendasi strategis yang didukung dashboard Power BI interaktif 3 halaman">Delivered 5 strategic recommendations supported by a 3-page interactive Power BI dashboard</li>
           </ul>
-          <div class="card-links">
-            <a href="https://github.com/iffatahnaf2025/banking-customer-behavior-analysis" class="card-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://drive.google.com/file/d/1z4xT__yT24ewu_CxP54werBmNglUwJDV/view?usp=sharing" class="card-link" target="_blank"><i class="fas fa-file-pdf"></i> <span data-en="View Portfolio PDF" data-id="View Portfolio PDF">View Portfolio PDF</span></a>
+          <div style="margin-top:auto">
+            <div class="card-links">
+              <a href="https://github.com/iffatahnaf2025/banking-customer-behavior-analysis" class="card-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://drive.google.com/file/d/1z4xT__yT24ewu_CxP54werBmNglUwJDV/view?usp=sharing" class="btn-accent" target="_blank" style="font-size:.7rem;padding:.38rem .9rem;min-height:34px;border-radius:var(--r-sm)">
+                <i class="fas fa-file-pdf"></i>
+                <span data-en="View Portfolio PDF" data-id="View Portfolio PDF">View Portfolio PDF</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="card reveal" style="transition-delay:.07s">
+      <!-- ══════════════════════════════════════════════════════════════
+           CARD 3 — SQL Mastery
+           ══════════════════════════════════════════════════════════════ -->
+      <div class="card reveal" style="transition-delay:.14s">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=700&q=80&auto=format&fit=crop" alt="SQL" loading="lazy"/>
         </div>
@@ -404,7 +474,10 @@ footer small{font-size:.68rem;color:var(--text3)}
         </div>
       </div>
 
-      <div class="card reveal" style="transition-delay:.14s">
+      <!-- ══════════════════════════════════════════════════════════════
+           CARD 4 — Web Scraping
+           ══════════════════════════════════════════════════════════════ -->
+      <div class="card reveal" style="transition-delay:.21s">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=700&q=80&auto=format&fit=crop" alt="Web Scraping" loading="lazy"/>
         </div>
@@ -425,27 +498,7 @@ footer small{font-size:.68rem;color:var(--text3)}
         </div>
       </div>
 
-      <!-- DS Card — uncomment when ready
-      <div class="card reveal" style="transition-delay:.21s">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=700&q=80&auto=format&fit=crop" alt="Diabetes" loading="lazy"/>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">Python · LightGBM · SHAP · Streamlit</span>
-          <h3>Diabetes Readmission Prediction: ML Model with SHAP Explainability</h3>
-          <ul class="card-highlights">
-            <li>LightGBM classifier to predict 30-day hospital readmission risk</li>
-            <li>SHAP values for explainability — clinical insight from predictions</li>
-            <li>Deployed as interactive Streamlit app for real-time risk scoring</li>
-          </ul>
-          <div class="card-links">
-            <a href="#" class="card-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="card-link" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-          </div>
-        </div>
-      </div>
-      -->
-    </div>
+    </div><!-- /panel-data -->
 
     <div class="panel" id="panel-design">
       <div class="design-banner reveal">
@@ -469,6 +522,7 @@ footer small{font-size:.68rem;color:var(--text3)}
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
